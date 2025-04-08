@@ -12,10 +12,17 @@ import { transformerCopyButton } from "@rehype-pretty/transformers";
 import OnThisPage from "@/components/onthispage";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
-import { visit } from 'unist-util-visit';
+import { visit } from "unist-util-visit";
 
+export async function generateStaticParams() {
+  const files = fs.readdirSync("content");
+
+  return files.map((file) => ({
+    slug: file.replace(/\.md$/, ""),
+  }));
+}
 const adjustImagePaths = () => (tree) => {
-  visit(tree, 'image', (node) => {
+  visit(tree, "image", (node) => {
     node.url = `/images/${node.url}`;
   });
 };
