@@ -60,8 +60,8 @@ export default async function Page({ params }) {
   const htmlContent = (await processor.process(content)).toString();
 
   return (
-    <div className="w-full py-4 flex">
-      <div className="w-[80%] px-[10%]">
+    <div className="w-full py-4 lg:flex">
+      <div className="lg:w-[80%] w-full px-[10%]">
         <h1 className="text-4xl font-bold mb-4">{data.title}</h1>
         <p className="text-base mb-2 border-l-4 border-gray-500 pl-4 italic">
           &quot;{data.description}&quot;
@@ -75,7 +75,7 @@ export default async function Page({ params }) {
           className="prose dark:prose-invert"
         ></div>
       </div>
-      <div className="w-[20%] pr-[10%]">
+      <div className="lg:w-[20%] w-0 pr-[10%]">
         <OnThisPage htmlContent={htmlContent} />
       </div>
     </div>

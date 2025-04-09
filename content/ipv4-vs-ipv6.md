@@ -39,11 +39,8 @@ IPv6 is the next-gen protocol with **128-bit** addresses. It’s written in hexa
 - Simplified headers and routing
 
 ---
-
 ## IPv4 vs IPv6: Key Differences
-
 ![IPv4 vs IPv6: Key Differences](ipv4-ipv6/2.jpg)
----
 
 ## Transition Strategies to IPv6
 
